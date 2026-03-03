@@ -1,0 +1,29 @@
+{
+  "name": "Michal Bartoš",
+  "skills": [
+    "HTML5 & Semantic Web",
+    "CSS3 & Modern Layouts",
+    "JavaScript (ES6+)",
+    "Git & GitHub Workflow",
+    "Tailwind CSS",
+    "Responsive Design"
+  ],
+  "interests": [
+    "Artificial Intelligence",
+    "Web Application Development",
+    "User Interface Design",
+    "Gaming & Hardware"
+  ],
+  "projects": [
+    {
+      "title": "Snake Game",
+      "description": "A classic arcade game built with vanilla JavaScript and Canvas API.",
+      "tech": "JavaScript, CSS3"
+    },
+    {
+      "title": "Personal Portfolio",
+      "description": "Dynamic profile page loading data from JSON.",
+      "tech": "HTML, JS, JSON"
+    }
+  ]
+}
