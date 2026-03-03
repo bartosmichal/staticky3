@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?php echo $name; ?> | IT Profil</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="glass-bg"></div>
+
+    <main class="container">
+        <header class="profile-header">
+            <div class="avatar-container">
+                <img src="avatar.png" alt="Profile" id="profile-img">
+            </div>
+            <h1><?php echo $name; ?></h1>
+            <p class="subtitle">IT Student & Developer</p>
+        </header>
+
+        <section class="content-grid">
+            <div class="card skills-card">
+                <h2><span class="icon">🚀</span> Dovednosti</h2>
+                <ul id="skills">
+                    <?php foreach ($skills as $skill): ?>
+                        <li><?php echo htmlspecialchars($skill); ?></li>
+                    <?php endforeach; ?>
+                </ul>
+            </div>
+
+            <div class="card interests-card">
+                <h2><span class="icon">🎨</span> Zájmy</h2>
+                <div id="interests">
+                    <ul>
+                        <?php foreach ($interests as $interest): ?>
+                            <li><?php echo htmlspecialchars($interest); ?></li>
+                        <?php endforeach; ?>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <?php if (!empty($projects)): ?>
+        <section class="projects-section">
+            <h2><span class="icon">💻</span> Projekty</h2>
+            <div id="projects" class="projects-grid">
+                <?php foreach ($projects as $project): ?>
+                    <div class="project-card">
+                        <h3><?php echo htmlspecialchars($project['title']); ?></h3>
+                        <p><?php echo htmlspecialchars($project['description']); ?></p>
+                        <span class="tech-tag"><?php echo htmlspecialchars($project['tech']); ?></span>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </section>
+        <?php endif; ?>
+
+    </main>
+</body>
+
+</html>
